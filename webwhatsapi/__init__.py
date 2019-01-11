@@ -550,7 +550,7 @@ class WhatsAPIDriver(object):
         :param message: Plain-text message to be sent.
         :type message: str
         """
-        return self.wapi_functions.sendMessageToID(recipient, message)
+        return self.wapi_functions.sendMessageToID(recipient, message.encode('cp1252'))
     
     def convert_to_base64(self, path):
         """
